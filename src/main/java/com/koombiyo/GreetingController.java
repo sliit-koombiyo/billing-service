@@ -1,6 +1,8 @@
 package com.koombiyo;
 
 import java.util.concurrent.atomic.AtomicLong;
+
+import com.koombiyo.models.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,8 +14,8 @@ public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/greeting")
-    public User greeting(@RequestParam(value="name", defaultValue="World") String name) {
-        return new User(counter.incrementAndGet(),
-                            String.format(template, name));
+    public String greeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return String.format(template, name);
     }
+
 }
