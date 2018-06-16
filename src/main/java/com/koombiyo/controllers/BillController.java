@@ -17,6 +17,7 @@ public class BillController {
     @Autowired
     BillRepository billRepository;
 
+    // TODO: I have to add the react front end as the origin - Damsith IT16037434
     @CrossOrigin(origins = "*")
     @RequestMapping(value = "/get-total", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public Bill getTotal(@RequestBody Bill bill) {
@@ -38,20 +39,4 @@ public class BillController {
         billRepository.save(bill);
         return bill;
     }
-
-//    @RequestMapping(value = "/{name}")
-//    public User read(@PathVariable String name) {
-//        return userRepository.findByName(name);
-//    }
-//
-//    @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-//    public void update(@RequestBody User user) {
-//        userRepository.save(user);
-//    }
-//
-//    @RequestMapping(value = "/{name}", method = RequestMethod.DELETE)
-//    public void delete(@PathVariable String name) {
-//        User deleteThis = userRepository.findByName(name);
-//        userRepository.delete(deleteThis);
-//    }
 }
