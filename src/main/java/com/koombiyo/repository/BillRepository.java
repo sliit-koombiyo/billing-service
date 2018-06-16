@@ -1,7 +1,6 @@
 package com.koombiyo.repository;
 
 import com.koombiyo.models.Bill;
-import com.koombiyo.models.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**

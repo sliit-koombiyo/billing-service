@@ -2,9 +2,7 @@ package com.koombiyo.controllers;
 
 import com.koombiyo.models.Bill;
 import com.koombiyo.models.BillItem;
-import com.koombiyo.models.User;
 import com.koombiyo.repository.BillRepository;
-import com.koombiyo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
